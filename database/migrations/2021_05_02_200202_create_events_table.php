@@ -15,7 +15,7 @@ class CreateEventsTable extends Migration
     {
         Schema::create('events', function (Blueprint $table) {
             $table->id();
-            $table->string("date");
+            $table->date("date");
             $table->string("moon_phase");
             $table->timestamps();
         });
