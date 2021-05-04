@@ -16,7 +16,7 @@ class EventController extends Controller
         }
 
 
-        $events = Event::with("farmActivityEvents", "farmActivityEvents.farmActivity")->where("date", "like", "%".$year."-".$month."%")->orderBy("date", "asc")->get();
+        $events = Event::with("farmActivityEvents", "farmActivityEvents.farmActivity")->where("date", "like", "%".$year."-".$month."%")->orderBy("date", "desc")->get();
         return response()->json($events);
 
     }
