@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\EventsController;
+use App\Models\Event;
+use Carbon\Carbon;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -40,3 +42,28 @@ Route::post("/event-store", [EventsController::class, "store"]);
 Route::post("/event-fetch", [EventsController::class, "fetchEvents"]);
 
 Route::post("/event-update", [EventsController::class, "update"]);
+
+Route::get("send-test", function(){
+
+    $todayDate = Carbon::now();
+    $todayActivities = "";
+
+    $event = Event::where("date", $todayDate->format("Y-m-d"))->with("farmActivityEvents", "farmActivityEvents.farmActivity")->first();
+    $index = 1;
+    foreach($event->farmActivityEvents as $activities){
+
+        $todayActivities .= $index."- ".$activities->farmActivity->name."\n";
+        $index++;
+    }
+
+
+    \OneSignal::sendNotificationToAll(
+        $todayActivities, 
+        $url = null, 
+        $data = null, 
+        $buttons = null, 
+        $schedule = null
+    );
+
+
+});
