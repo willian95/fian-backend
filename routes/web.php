@@ -4,9 +4,6 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\EventsController;
-use App\Models\Event;
-use Carbon\Carbon;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
