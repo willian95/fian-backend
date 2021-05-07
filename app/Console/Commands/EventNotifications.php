@@ -5,7 +5,6 @@ namespace App\Console\Commands;
 use Illuminate\Console\Command;
 use App\Models\Event;
 use Carbon\Carbon;
-use Berkayk\OneSignal;
 
 class EventNotifications extends Command
 {
@@ -53,7 +52,7 @@ class EventNotifications extends Command
         }
 
 
-        OneSignal::sendNotificationToAll(
+        \OneSignal::sendNotificationToAll(
             $todayActivities, 
             $url = null, 
             $data = null, 
