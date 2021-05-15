@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\EventsController;
+use App\Http\Controllers\DepartmentController;
+use App\Http\Controllers\MarketController;
 use App\Models\Event;
 use Carbon\Carbon;
 /*
@@ -42,6 +44,19 @@ Route::post("/event-store", [EventsController::class, "store"]);
 Route::post("/event-fetch", [EventsController::class, "fetchEvents"]);
 
 Route::post("/event-update", [EventsController::class, "update"]);
+
+Route::get("/departments/fetch", [DepartmentController::class, "fetch"]);
+
+Route::get("/market", function(){
+
+    return view("market");
+
+})->middleware("auth");
+
+Route::post("market/store", [MarketController::class, "store"]);
+Route::get("market/fetch/{page}", [MarketController::class, "fetch"]);
+Route::post("market/update", [MarketController::class, "update"]);
+Route::post("market/delete", [MarketController::class, "delete"]);
 
 Route::get("send-test", function(){
 

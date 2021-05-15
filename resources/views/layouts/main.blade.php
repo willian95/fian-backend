@@ -157,6 +157,13 @@ License: You must have a valid license purchased only from themeforest(the above
 									</a>
 								</li>
 
+								<li class="menu-item" aria-haspopup="true">
+									<a href="{{ url('/market') }}" class="menu-link">
+										<i class="menu-icon flaticon-user-add"></i>
+										<span class="menu-text">Mercados</span>
+									</a>
+								</li>
+
 								
 							</ul>
 							<!--end::Menu Nav -->

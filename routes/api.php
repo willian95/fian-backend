@@ -3,6 +3,8 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\EventController;
+use App\Http\Controllers\API\MarketController;
+use App\Http\Controllers\API\VerifyNumberController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,4 +21,12 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::get('sendSMS', [VerifyNumberController::class, "sendCode"]);
+
 Route::get("/events/{month}/{year}", [EventController::class, "fetchEvents"]);
+
+Route::post("/markets", [MarketController::class, "fetchMarkets"]);
+
+Route::post("/store-number", [VerifyNumberController::class, "storePhoneNumber"]);
+
+Route::post("/verify-number", [VerifyNumberController::class, "verify"]);
