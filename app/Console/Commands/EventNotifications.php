@@ -51,8 +51,11 @@ class EventNotifications extends Command
             $index++;
         }
 
+        $params = [];
+        $params['small_icon'] = 'ic_stat_distriqt_default'; // icon res name specified in your app
 
-        \OneSignal::sendNotificationToAll(
+
+        \OneSignal::addParams($params)->sendNotificationToAll(
             $todayActivities, 
             $url = null, 
             $data = null, 
