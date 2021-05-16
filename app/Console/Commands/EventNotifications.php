@@ -52,7 +52,7 @@ class EventNotifications extends Command
         }
 
         $params = [];
-        $params['small_icon'] = 'ic_stat_distriqt_default'; // icon res name specified in your app
+        $params['small_icon'] = url('/assets/agriculture.png'); // icon res name specified in your app
 
 
         \OneSignal::addParams($params)->sendNotificationToAll(
