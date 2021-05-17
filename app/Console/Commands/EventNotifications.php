@@ -65,7 +65,7 @@ class EventNotifications extends Command
             $schedule = null
         );
 
-        foreach(PhoneNumber::whereIsNotNull("validated_at")->get() as $users){
+        foreach(PhoneNumber::whereNotNull("validated_at")->get() as $users){
 
             $receiverNumber = "+".$phoneNumber->phone_number;
             $message = $todayActivities;
