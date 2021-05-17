@@ -25,6 +25,8 @@ Route::get('/', function () {
 
 Route::post('/login', [AuthController::class, "login"]);
 
+Route::get('/logout', [AuthController::class, "logout"])->middleware("auth");
+
 Route::get("/home", function(){
 
     return view("dashboard");

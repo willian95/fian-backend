@@ -5,6 +5,8 @@ namespace App\Console\Commands;
 use Illuminate\Console\Command;
 use App\Models\Event;
 use Carbon\Carbon;
+use Twilio\Rest\Client;
+use App\Models\PhoneNumber;
 
 class EventNotifications extends Command
 {
@@ -41,7 +43,7 @@ class EventNotifications extends Command
     {
         
         $todayDate = Carbon::now();
-        $todayActivities = "";
+        $todayActivities = "Tus actividades del día son: \n";
 
         $event = Event::where("date", $todayDate->format("Y-m-d"))->with("farmActivityEvents", "farmActivityEvents.farmActivity")->first();
         $index = 1;
@@ -62,6 +64,28 @@ class EventNotifications extends Command
             $buttons = null, 
             $schedule = null
         );
+
+        foreach(PhoneNumber::whereIsNotNull("validated_at")->get() as $users){
+
+            $receiverNumber = "+".$phoneNumber->phone_number;
+            $message = $todayActivities;
+    
+            try {
+    
+                $account_sid = getenv("TWILIO_SID");
+                $auth_token = getenv("TWILIO_TOKEN");
+                $twilio_number = getenv("TWILIO_FROM");
+    
+                $client = new Client($account_sid, $auth_token);
+                $client->messages->create($receiverNumber, [
+                    'from' => $twilio_number, 
+                    'body' => $message]);
+
+            } catch (Exception $e) {
+                //dd("Error: ". $e->getMessage());
+            }
+
+        }
 
     }
 }

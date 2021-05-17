@@ -144,7 +144,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							<ul class="menu-nav">
 
 								<li class="menu-item" aria-haspopup="true">
-									<a href="{{ url('/dashboard') }}" class="menu-link">
+									<a href="{{ url('/home') }}" class="menu-link">
 										<i class="menu-icon flaticon-home-1"></i>
 										<span class="menu-text">Inicio</span>
 									</a>
@@ -152,14 +152,14 @@ License: You must have a valid license purchased only from themeforest(the above
 
 								<li class="menu-item" aria-haspopup="true">
 									<a href="{{ url('/calendar') }}" class="menu-link">
-										<i class="menu-icon flaticon-user-add"></i>
+										<i class="menu-icon flaticon2-calendar-1"></i>
 										<span class="menu-text">Calendario</span>
 									</a>
 								</li>
 
 								<li class="menu-item" aria-haspopup="true">
 									<a href="{{ url('/market') }}" class="menu-link">
-										<i class="menu-icon flaticon-user-add"></i>
+										<i class="menu-icon flaticon2-shopping-cart"></i>
 										<span class="menu-text">Mercados</span>
 									</a>
 								</li>
