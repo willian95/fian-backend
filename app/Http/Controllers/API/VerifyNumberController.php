@@ -42,7 +42,7 @@ class VerifyNumberController extends Controller
             $auth_token = getenv("TWILIO_TOKEN");
             $twilio_number = getenv("TWILIO_FROM");
   
-            $client = new Client($account_sid, $auth_token);
+            $client = new \Client($account_sid, $auth_token);
             $client->messages->create($receiverNumber, [
                 'from' => $twilio_number, 
                 'body' => $message]);
