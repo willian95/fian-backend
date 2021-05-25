@@ -8,6 +8,9 @@ use App\Http\Requests\StoreEventRequest;
 use App\Models\Event;
 use App\Models\FarmActivityEvent;
 
+use Maatwebsite\Excel\Facades\Excel;
+use App\Exports\EventsExport;
+
 class EventsController extends Controller
 {
     
@@ -91,6 +94,12 @@ class EventsController extends Controller
 
         $events = Event::with("farmActivityEvents", "farmActivityEvents.farmActivity")->where("date", "like", "%".$request->year."-".$request->month."%")->get();
         return response()->json(["events" => $events]);
+
+    }
+
+    function exportCsv($startDate, $endDate){
+
+        return Excel::download((new EventsExport)->forFromDate($startDate)->forToDate($endDate), 'eventos'.$startDate.'-'.$endDate.'.xlsx');
 
     }
 

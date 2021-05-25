@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Http\Requests\MarketRequest;
 use App\Http\Requests\MarketUpdateRequest;
 use App\Models\Market;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Exports\MarketsExport;
 
 class MarketController extends Controller
 {
@@ -79,6 +81,12 @@ class MarketController extends Controller
         $marketsCount = Market::count();
 
         return response()->json(["markets" => $markets, "marketsCount" => $marketsCount, "dataAmount" => $dataAmount]);
+
+    }
+
+    function exportCsv(){
+
+        return Excel::download(new MarketsExport, 'mercados.xlsx');
 
     }
 
