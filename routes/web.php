@@ -40,14 +40,13 @@ Route::get("/calendar", function(){
 })->middleware("auth");
 
 Route::get("/get-farm-activities", [EventsController::class, "getFarmActivities"]);
-
 Route::post("/event-store", [EventsController::class, "store"]);
-
 Route::post("/event-fetch", [EventsController::class, "fetchEvents"]);
-
 Route::post("/event-update", [EventsController::class, "update"]);
+Route::get("/event/download/csv/{startDate}/{endDate}", [EventsController::class, "exportCsv"]);
 
 Route::get("/departments/fetch", [DepartmentController::class, "fetch"]);
+
 
 Route::get("/market", function(){
 
@@ -59,6 +58,7 @@ Route::post("market/store", [MarketController::class, "store"]);
 Route::get("market/fetch/{page}", [MarketController::class, "fetch"]);
 Route::post("market/update", [MarketController::class, "update"]);
 Route::post("market/delete", [MarketController::class, "delete"]);
+Route::get("market/download/csv", [MarketController::class, "exportCsv"]);
 
 Route::get("send-test", function(){
 

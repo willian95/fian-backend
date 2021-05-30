@@ -52,6 +52,22 @@
                                         <option value="creciente">Luna Creciente</option>
                                         <option value="menguante">Luna Menguante</option>
                                         <option value="nueva">Luna Nueva</option>
+                                        <option value="llena_equinoccio_otono">Luna llena equinoccio otoño</option>
+                                        <option value="llena_equinoccio_primavera">Luna llena equinoccio primavera</option>
+                                        <option value="llena_solsticio_invierno">Luna llena solsticio invierno</option>
+                                        <option value="llena_solsticio_verano">Luna llena solsticio verano</option>
+                                        <option value="nueva_equinoccio_otono">Luna nueva equinoccio otoño</option>
+                                        <option value="nueva_equinoccio_primavera">Luna nueva equinoccio primavera</option>
+                                        <option value="nueva_solsticio_invierno">Luna nueva solsticio invierno</option>
+                                        <option value="nueva_solsticio_verano">Luna nueva solsticio verano</option>
+                                        <option value="creciente_equinoccio_otono">Luna creciente equinoccio otoño</option>
+                                        <option value="creciente_equinoccio_primavera">Luna creciente equinoccio primavera</option>
+                                        <option value="creciente_solsticio_invierno">Luna creciente solsticio invierno</option>
+                                        <option value="creciente_solsticio_verano">Luna creciente solsticio verano</option>
+                                        <option value="menguante_equinoccio_otono">Luna menguante equinoccio otoño</option>
+                                        <option value="menguante_equinoccio_primavera">Luna menguante equinoccio primavera</option>
+                                        <option value="menguante_solsticio_invierno">Luna menguante solsticio invierno</option>
+                                        <option value="menguante_solsticio_verano">Luna menguante solsticio verano</option>
                                     </select>
                                 </div>
                             </div>
