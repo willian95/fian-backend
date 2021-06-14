@@ -62,7 +62,7 @@ Route::get("market/download/csv", [MarketController::class, "exportCsv"]);
 
 Route::get("send-test", function(){
 
-    $todayDate = Carbon::now();
+    /*$todayDate = Carbon::now();
     $todayActivities = "";
 
     $event = Event::where("date", $todayDate->format("Y-m-d"))->with("farmActivityEvents", "farmActivityEvents.farmActivity")->first();
@@ -71,11 +71,11 @@ Route::get("send-test", function(){
 
         $todayActivities .= $index."- ".$activities->farmActivity->name."\n";
         $index++;
-    }
+    }*/
 
 
     \OneSignal::sendNotificationToAll(
-        $todayActivities, 
+        "test", 
         $url = null, 
         $data = null, 
         $buttons = null, 

@@ -22,8 +22,7 @@ class FarmActivitySeeder extends Seeder
             //$farmActivity->icon = strpos(url('/'), "localhost") > 0 ? url('/').":8000/icons/icon1.png" : url('/')."/icons/icon1.png";
             $farmActivity->icon = $url."/icons/icon1.png";
             $farmActivity->name = "Preparación de suelos";
-            $farmActivity->description = "En este proceso se debe eliminar malezas, airear y acondicionarlo según su necesidad. Es favorable hacer esta labor en el periodo extensivo aguas abajo ya que la savia se encuentra en la raíz y actividad biológica del suelo está en su mejor momento.";
-            $farmActivity->best_season = "4 días antes de menguante y 3 días luego de la luna nueva.";
+            $farmActivity->description = "Tiempo para eliminar arvenses, airear y acondicionar el suelo. Es favorable hacer estas actividades en periodos aguas abajo, cuando la actividad biológica del suelo está en su mejor momento. Cuatro días antes y tres días luego de luna nueva.";
             $farmActivity->save(); 
 
         }
@@ -32,11 +31,10 @@ class FarmActivitySeeder extends Seeder
 
             $farmActivity = new FarmActivity;
             $farmActivity->id = 2;
-            //$farmActivity->icon = strpos(url('/'), "localhost") > 0 ? url('/').":8000/icons/icon2.png" : url('/')."/icons/icon2.png";
             $farmActivity->icon = $url."/icons/icon2.png";
-            $farmActivity->name = "Aplicación de abonos sólidos para perennes";
-            $farmActivity->description = "Las raíces de las plantas de los cultivos de ciclo corto son poco desarrolladas, por lo tanto para la aplicación de abono en ellas se aplican en el  periodo aguas arriba y se obtienen mejores resultados.";
-            $farmActivity->best_season = "Creciente a luna Llena.";
+            $farmActivity->name = "Aplicación de fertilizantes edáficos";
+            $farmActivity->description = "Actividad que se debe hacer en luna menguante para cultivos adultos que se encuentren en plena producción; en cultivos nuevos, con menos de dos años de estar establecidos, se debe realizar en el periodo extensivo aguas arriba, o sea, tres días después de la luna nueva hasta los tres últimos días de luna llena.";
+
             $farmActivity->save(); 
 
         }
@@ -46,10 +44,9 @@ class FarmActivitySeeder extends Seeder
             $farmActivity = new FarmActivity;
             $farmActivity->id = 3;
             $farmActivity->icon = $url."/icons/icon3.png";
-            
-            $farmActivity->name = "Aplicación de abonos sólidos para semestrales";
-            $farmActivity->description = "Las raíces de las plantas de los cultivos de ciclo corto son poco desarrolladas, por lo tanto para la aplicación de abono en ellas se aplican en el periodo aguas arriba y se obtienen mejores resultados.";
-            $farmActivity->best_season = "Creciente a luna Llena.";
+            $farmActivity->name = "Aplicación de Fertilizantes foliares";
+            $farmActivity->description = "Se recomienda hacer esta actividad en periodo de aguas arriva, en luna creciente, cuando las ramas, hojas, flores y frutos están en la máxima actividad de estimulación y absorción energética y a través de la savia.";
+
             $farmActivity->save(); 
 
         }
@@ -59,9 +56,10 @@ class FarmActivitySeeder extends Seeder
             $farmActivity = new FarmActivity;
             $farmActivity->id = 4;
             $farmActivity->icon = $url."/icons/icon4.png";
-            $farmActivity->name = "Aplicación de biofertilizantes";
-            $farmActivity->description = "Estas aplicaciones foliares se realizan en el periodo  aguas arriba porque la savia se encuentra en las hojas y en la zona aérea de la planta en alta movilidad, por lo tanto el producto es más absorbible y eficiente.";
-            $farmActivity->best_season = "Todo creciente.";
+            $farmActivity->name = "Manejo físico - mecánico arvenses";
+            $farmActivity->description = "Actividad que se recomienda realizar en periodo de aguas abajo, hacer un control físico-mecánico en luna menguante agota las reservas concentradas en las raíces de estas plantas y retarda su recuperación y crecimiento. En climas fríos y templados se recomienda la combinación seguida de dos controles físico-mecánicos, el primero en luna creciente y el segundo en luna 
+            menguante, para así acelerar el agotamiento de las reservas de las mismas.";
+
             $farmActivity->save(); 
 
         }
@@ -71,9 +69,9 @@ class FarmActivitySeeder extends Seeder
             $farmActivity = new FarmActivity;
             $farmActivity->id = 5;
             $farmActivity->icon = $url."/icons/icon5.png";
-            $farmActivity->name = "Manejo de arvenses";
-            $farmActivity->description = "Las mal llamadas “malezas” se recomiendan controlarlas en época aguas abajo, preferiblemente en menguante ya que la savia se encuentra más concentrada en la raíz y la zona aérea queda debilitada y se ralentiza su crecimiento.";
-            $farmActivity->best_season = "Menguante y los 3 días siguientes.";
+            $farmActivity->name = "Corte de madera y guadua";
+            $farmActivity->description = "El corte de madera y de guadua para construcción se hace en periodos de aguas abajo, cuando la savia este concentrada en las raíces y los tallos tengan menor humedad, lo que les garantice mayor durabilidad y menor susceptibilidad al ataque por insectos. Tres últimos días luna menguante y tres primeros días luna nueva.";
+
             $farmActivity->save(); 
 
         }
@@ -82,10 +80,10 @@ class FarmActivitySeeder extends Seeder
 
             $farmActivity = new FarmActivity;
             $farmActivity->id = 6;
-            $farmActivity->icon = url('/')."/icons/icon6.png";
-            $farmActivity->name = "Poda de formación";
-            $farmActivity->description = "Los arboles necesitan que se les realice estas podas de manera regular y se deben realizar cuando inicie el periodo aguas arriba para que la savia que inicia su movilidad en la parte aérea pueda mitigar alguna tensión a la planta.";
-            $farmActivity->best_season = "3 días antes de creciente.";
+            $farmActivity->icon = $url."/icons/icon6.png";
+            $farmActivity->name = "Siembra de tubérculos y raíces";
+            $farmActivity->description = "Actividad que se realiza en luna menguante, en periodos de aguas abajo, ya que la savia tiene mayor actividad en las partes subterráneas de las plantas y se favorece en crecimiento de órganos como raíces y tubérculos. Lo que se siembra en menguante pasa los primeros quince días bajo una luminosidad lunar que tiende a cero, lo que estimula más el desarrollo de raíces, retardando la floración y fructificación.";
+
             $farmActivity->save(); 
 
         }
@@ -95,9 +93,9 @@ class FarmActivitySeeder extends Seeder
             $farmActivity = new FarmActivity;
             $farmActivity->id = 7;
             $farmActivity->icon = $url."/icons/icon7.png";
-            $farmActivity->name = "Poda de formación";
-            $farmActivity->description = "Los arboles necesitan que se les realice estas podas de manera regular y se deben realizar cuando inicie el periodo aguas arriba para que la savia que inicia su movilidad en la parte aérea pueda mitigar alguna tensión a la planta.";
-            $farmActivity->best_season = "3 días antes de creciente.";
+            $farmActivity->name = "Fecundación para nacimiento de machos";
+            $farmActivity->description = "Cuando la fecundación se logra en luna creciente hacia plenilunio o luna llena, predomina el nacimiento del sexo masculino.";
+
             $farmActivity->save(); 
 
         }
@@ -107,9 +105,9 @@ class FarmActivitySeeder extends Seeder
             $farmActivity = new FarmActivity;
             $farmActivity->id = 8;
             $farmActivity->icon = $url."/icons/icon8.png";
-            $farmActivity->name = "Poda de producción";
-            $farmActivity->description = "La savia empieza a bajar a la raíz hacia el final del periodo de aguas arriba, en ese momento se puede iniciar la poda de producción ya que al estar generándose ese movimiento genera un corto estrés a la planta que activa la floración.";
-            $farmActivity->best_season = "3 días antes de menguante";
+            $farmActivity->name = "Poda de limpieza";
+            $farmActivity->description = "Actividades que se centralizan entre los últimos tres días de luna menguante y primeros tres días de luna nueva, evitando pudriciones y obteniéndose una rápida y mejor cicatrización. La luna nueva es considerada como la fase donde todo se limpia, lo que equivale a la purga. No son ejecutadas entre luna creciente y la luna llena ya que la savia de las plantas está en los brotes o en las partes más nuevas de las mismas, las plantas pueden debilitarse y morir si no están bien nutridas.";
+
             $farmActivity->save(); 
 
         }
@@ -119,9 +117,9 @@ class FarmActivitySeeder extends Seeder
             $farmActivity = new FarmActivity;
             $farmActivity->id = 9;
             $farmActivity->icon = $url."/icons/icon9.png";
-            $farmActivity->name = "Corte de guadua";
-            $farmActivity->description = "Un buen corte de madera y de guadua es fundamental para el éxito del trabajo que se vaya a realizar con estos. Por consiguiente, se deben cortar en el periodo intensivo aguas abajo, al estar la savia concentrada en la zona radicular, el tallo esta menos húmedo y tendrá mayor durabilidad. En el caso de la guadua adicional a lo anterior, se recomienda hacer el corte en horas de la madrugada en el que está prácticamente toda la savia en la raíz.";
-            $farmActivity->best_season = "3 días antes de luna nueva y 3 días después";
+            $farmActivity->name = "Engorde y crecimiento de lombrices";
+            $farmActivity->description = "Últimos tres días de luna menguante y primeros tres días de la luna nueva son las mejores fases para el engorde y el crecimiento de las lombrices, ya que la oscuridad de este periodo es la mejor aliada para estimular el apetito y la búsqueda del alimento que se encuentra ubicado en la superficie de la tierra en los criaderos.";
+
             $farmActivity->save(); 
 
         }
@@ -131,9 +129,9 @@ class FarmActivitySeeder extends Seeder
             $farmActivity = new FarmActivity;
             $farmActivity->id = 10;
             $farmActivity->icon = $url."/icons/icon10.png";
-            $farmActivity->name = "Siembra de tubérculos y raíces";
-            $farmActivity->description = "La siembra de estas plantas para la futura cosecha de estos órganos se ve muy favorecida si se realiza en el periodo extensivo aguas abajo, ya que la savia favorece la raíz y estimula el crecimiento y desarrollo de la planta.";
-            $farmActivity->best_season = "Menguante a luna nueva";
+            $farmActivity->name = "Cosecha de tuberculos y raíces";
+            $farmActivity->description = "Se recomienda realizar esta práctica en periodos de aguas abajo, cuatro días antes de luna nueva y tres días después, pues la savia se encuentra concentrada en las partes subterráneas de las plantas como raíces y tubérculos.";
+
             $farmActivity->save(); 
 
         }
@@ -143,9 +141,9 @@ class FarmActivitySeeder extends Seeder
             $farmActivity = new FarmActivity;
             $farmActivity->id = 11;
             $farmActivity->icon = $url."/icons/icon11.png";
-            $farmActivity->name = "Siembra directa para cosecha de hojas";
-            $farmActivity->description = "La siembra de estas plantas para la futura cosechade estos órganos se ve muy favorecida si se realiza en el periodo extensivo aguas abajo, ya que la savia favorece la raíz y estimula el crecimiento y desarrollo de la planta.";
-            $farmActivity->best_season = "Menguante a luna nueva";
+            $farmActivity->name = "Cosecha de miel";
+            $farmActivity->description = "Puesto que el flujo de néctar intensivo ocurre desde la luna llena hasta finalizar la luna menguante, se recomienda realizar la cosecha de miel en los primeros días de luna nueva, en periodo de aguas abajo, cuando la miel está en un proceso de reposo en el cual es más alimenticia";
+
             $farmActivity->save(); 
 
         }
@@ -155,9 +153,9 @@ class FarmActivitySeeder extends Seeder
             $farmActivity = new FarmActivity;
             $farmActivity->id = 12;
             $farmActivity->icon = $url."/icons/icon12.png";
-            $farmActivity->name = "Siembra directa para cosecha de frutos y flores";
-            $farmActivity->description = "El periodo aguas arriba es el momento idóneo para esta siembra, debido a que la savia se encuentra en la zona aérea favoreciendo estos órganos en su crecimiento, otorgando mejores flores y frutos.";
-            $farmActivity->best_season = "Creciente a Menguante";
+            $farmActivity->name = "Siembra o transplante para cosecha de frutos y flores";
+            $farmActivity->description = "Puesto que el flujo de néctar intensivo ocurre desde la luna llena hasta finalizar la luna menguante, se recomienda realizar la cosecha de miel en los primeros días de luna nueva, en periodo de aguas abajo, cuando la miel está en un proceso de reposo en el cual es más alimenticia";
+
             $farmActivity->save(); 
 
         }
@@ -167,9 +165,9 @@ class FarmActivitySeeder extends Seeder
             $farmActivity = new FarmActivity;
             $farmActivity->id = 13;
             $farmActivity->icon = $url."/icons/icon13.png";
-            $farmActivity->name = "Siembra o transplantes de forestales y frutales";
-            $farmActivity->description = "El periodo aguas arriba es el momento idóneo para esta siembra, debido a que la savia se encuentra en la zona aérea favoreciendo estos órganos en su crecimiento, otorgando mejores flores y frutos.";
-            $farmActivity->best_season = "Creciente a Menguante";
+            $farmActivity->name = "Cosecha de hojas aromáticas medicinales";
+            $farmActivity->description = "Cuando se quiere hacer la recolección de hojas, tallos, flores y frutos principalmente para la preparación de macerados, se recomienda en periodo de aguas arriba, en luna llena, ya que esta actúa más directamente sobre las plantas con el efecto purificador de sus rayos lunares, enriqueciendo la savia que circula con gran intensidad en ellas.";
+
             $farmActivity->save(); 
 
         }
@@ -179,9 +177,10 @@ class FarmActivitySeeder extends Seeder
             $farmActivity = new FarmActivity;
             $farmActivity->id = 14;
             $farmActivity->icon = $url."/icons/icon14.png";
-            $farmActivity->name = "Recolección de frutos";
-            $farmActivity->description = "Para la cosecha de estos productos debe hacer en el periodo intensivo de aguas arriba ya que la savia se encuentra en la parte aérea y las hojas y frutos serán más carnosos y nutritivos.";
-            $farmActivity->best_season = "3 días antes de luna llena y 3 días después.";
+            
+            $farmActivity->name = "Cosecha de frutos y follaje";
+            $farmActivity->description = "Actividad que se realiza en periodo de aguas arriba, tres días antes de luna llena y tres días después, cuando la savia de las plantas se encuentra en la parte aérea y estos órganos están más jugosos y en óptimas condiciones para su consumo en fresco. Sin embargo, cuando la producción está destinada a largos períodos de transporte y de espera para ser consumidos, la cosecha se debe programar para después de la luna llena. ";
+            
             $farmActivity->save(); 
 
         }
@@ -191,9 +190,10 @@ class FarmActivitySeeder extends Seeder
             $farmActivity = new FarmActivity;
             $farmActivity->id = 15;
             $farmActivity->icon = $url."/icons/icon15.png";
-            $farmActivity->name = "Recolección de follaje";
-            $farmActivity->description = "Para la cosecha de estos productos debe hacer en el periodo intensivo de aguas arriba ya que la savia se encuentra en la parte aérea y las hojas y frutos serán más carnosos y nutritivos.";
-            $farmActivity->best_season = "3 días antes de luna llena y 3 días después.";
+            
+            $farmActivity->name = "Acodo e injertos";
+            $farmActivity->description = "Se recomienda realizar estas actividades en periodos aguas arriba, últimos tres días de la luna creciente y tres primeros días de la luna llena, cuando el índice de pega de los injertos es mayor y cuando la savia de las plantas se encuentra en la parte aérea, en hojas y tallos estimulándose la actividad y crecimiento en estas partes.";
+            
             $farmActivity->save(); 
 
         }
@@ -203,9 +203,10 @@ class FarmActivitySeeder extends Seeder
             $farmActivity = new FarmActivity;
             $farmActivity->id = 16;
             $farmActivity->icon = $url."/icons/icon16.png";
-            $farmActivity->name = "Recolección de tubérculos y raíces";
-            $farmActivity->description = "El periodo intensivo aguas abajo, cuando la savia se encuentra concentrada en la zona radicular, es el momento óptimo para la cosecha, preferiblemente se debe realizar en las horas de la tarde y se obtendrán una cosecha jugosa.";
-            $farmActivity->best_season = "4 días antes de luna nueva y 3 días después";
+            
+            $farmActivity->name = "Manejo de parásitos";
+            $farmActivity->description = "En los animales, la mejor fase lunar asociada con el tratamiento de los parásitos es el plenilunio o luna llena, ya que los movimientos de estos parásitos son más activos en el cuerpo durante esta fase de aguas arriba. Se recomienda hacer purgas y exámenes coprológicos.";
+            
             $farmActivity->save(); 
 
         }
@@ -215,9 +216,10 @@ class FarmActivitySeeder extends Seeder
             $farmActivity = new FarmActivity;
             $farmActivity->id = 17;
             $farmActivity->icon = $url."/icons/icon17.png";
-            $farmActivity->name = "Cosecha de miel";
-            $farmActivity->description = "El pSe recomienda en el inicio del periodo extensivo aguas abajo en el cual la miel está en un proceso de reposo en el cual es más alimenticia.";
-            $farmActivity->best_season = "3 días después de luna llena.";
+            
+            $farmActivity->name = "Poda de producción";
+            $farmActivity->description = "Cuando los árboles son muy vigorosos y queremos frenar su vigor para estimularlo a la fructificación, se recomienda podarlo en periodo de aguas arriba, plenilunio o luna llena.";
+            
             $farmActivity->save(); 
 
         }
@@ -227,9 +229,10 @@ class FarmActivitySeeder extends Seeder
             $farmActivity = new FarmActivity;
             $farmActivity->id = 18;
             $farmActivity->icon = $url."/icons/icon18.png";
-            $farmActivity->name = "Producción de semillas";
-            $farmActivity->description = "Para disponer de un buen material de semillas para posteriores siembras, se deben cosechar en el periodo de aguas abajo ya que pueden resistir más a algún tipo de deterioro. No debemos olvidar que al momento de conservarlas, realizarlas de la manera adecuada.";
-            $farmActivity->best_season = "3 días antes de menguante.";
+            
+            $farmActivity->name = "Siembra para cosecha de hojas";
+            $farmActivity->description = "Todas las plantas que nacen al ras de la tierra, como lechugas, acelgas, espinacas, maíz, col, hojas, etc., cuyo producto para el consumo son las hojas frescas, se recomienda sembrar en periodo de aguas abajo, fase de luna menguante, porque cuando se plantan en luna creciente tienden a subir a flor prematuramente.";
+            
             $farmActivity->save(); 
 
         }
@@ -239,9 +242,10 @@ class FarmActivitySeeder extends Seeder
             $farmActivity = new FarmActivity;
             $farmActivity->id = 19;
             $farmActivity->icon = $url."/icons/icon19.png";
-            $farmActivity->name = "Transplante de plantulas";
-            $farmActivity->description = "Las plantas del huerto primero crecen en almácigos pero llega un momento, cuando están fuertes y maduras, que deben ser trasplantadas a su lugar definitivo para así tener más espacio y desarrollarse mejor.";
-            $farmActivity->best_season = "3 dias después de luna nueva durante 3 dias";
+            
+            $farmActivity->name = "Producción de semillas";
+            $farmActivity->description = "La mejor luna para cosechar y conservar granos y alimentos para que duren más tiempo en buen estado, sean menos susceptibles al deterioro, tengan mejor sazón, sean más resistentes contra el ataque de insectos y microorganismos cuando son almacenados, es la fase de luna menguante, en periodo de aguas abajo.";
+            
             $farmActivity->save(); 
 
         }
@@ -251,9 +255,10 @@ class FarmActivitySeeder extends Seeder
             $farmActivity = new FarmActivity;
             $farmActivity->id = 20;
             $farmActivity->icon = $url."/icons/icon20.png";
-            $farmActivity->name = "Aleopatía aérea";
-            $farmActivity->description = "La aleopatía o interaación de las plantas generan una acción repelente o atrayente dependiendo del metabolismo de la planta, en el periodo aguas arriba hay mayor movimiento en la parteaérea y en el periodo aguas abajo la actividad aleopatica se desplaza a la raíz. ";
-            $farmActivity->best_season = "de creciente a luna llena";
+            
+            $farmActivity->name = "Fecundación para nacimiento de hembras";
+            $farmActivity->description = "Cuando se logra la fecundación durante la luna menguante hacia el novilunio o luna nueva, predomina el nacimiento del sexo femenino";
+            
             $farmActivity->save(); 
 
         }
@@ -263,9 +268,9 @@ class FarmActivitySeeder extends Seeder
             $farmActivity = new FarmActivity;
             $farmActivity->id = 21;
             $farmActivity->icon = $url."/icons/icon21.png";
-            $farmActivity->name = "Aleopatía redicular";
-            $farmActivity->description = "La aleopatía o interaación de las plantas generan una acción repelente o atrayente dependiendo del metabolismo de la planta, en el periodo aguas arriba hay mayor movimiento en la parteaérea y en el periodo aguas abajo la actividad aleopatica se desplaza a la raíz. ";
-            $farmActivity->best_season = "de menguante a luna nueva.";
+            $farmActivity->name = "Poda de formación ";
+            $farmActivity->description = "Para la realización de podas en árboles nuevos, período de formación de copa y producción de estacas, se recomienda realizar esta actividad en plena luna nueva hasta tres primeros días de luna creciente, con la mismos.";
+
             $farmActivity->save(); 
 
         }
@@ -274,10 +279,10 @@ class FarmActivitySeeder extends Seeder
 
             $farmActivity = new FarmActivity;
             $farmActivity->id = 22;
-            $farmActivity->icon = $url."/icons/icon21.png";
-            $farmActivity->name = "Manejo de parásitos internos y externos de animales";
-            $farmActivity->description = "El momento ideal para este tipo de tratamiento es en la luna llena ya que los movimientos corporales son más activos en ese día y puede moverse por todo el cuerpo del hospedero.";
-            $farmActivity->best_season = "Luna llena.";
+            $farmActivity->icon = $url."/icons/icon22.png";
+            $farmActivity->name = "Meditación y ofrenda";
+            $farmActivity->description = "Días de luna llena y luna nueva son los ideales para estas actividades, ya que hay mucha energía disponible para todos y cuando meditamos esta cantidad de energía puede ser usada para el desarrollo consciente de nuestro mundo.";
+
             $farmActivity->save(); 
 
         }
@@ -287,9 +292,9 @@ class FarmActivitySeeder extends Seeder
             $farmActivity = new FarmActivity;
             $farmActivity->id = 23;
             $farmActivity->icon = $url."/icons/icon23.png";
-            $farmActivity->name = "Fecundación para nacimiento de hembras";
-            $farmActivity->description = "Cuando se fecunda en el periodo intensivo aguas abajo antes del novilunio predomina un nacimiento de sexo femenino. Cuando la fecundación se realiza en el periodo intensivo aguas arriba predomina el nacimiento de sexo masculino.";
-            $farmActivity->best_season = "Luna nueva y 3 días antes";
+            $farmActivity->name = "Cosecha de raices aromáticas medicinales";
+            $farmActivity->description = "Cuando se quiere hacer la recolección de la parte subterránea de la planta como raíces, tubérculos o rizomas; periodo de aguas abajo, los últimos cuatro días de la luna menguante y los tres primeros días de luna nueva son los días más recomendados.";
+
             $farmActivity->save(); 
 
         }
@@ -299,9 +304,9 @@ class FarmActivitySeeder extends Seeder
             $farmActivity = new FarmActivity;
             $farmActivity->id = 24;
             $farmActivity->icon = $url."/icons/icon24.png";
-            $farmActivity->name = "Fecundación para nacimiento de machos";
-            $farmActivity->description = "Cuando se fecunda en el periodo intensivo aguas abajo antes del novilunio predomina un nacimiento de sexo femenino. Cuando la fecundación se realiza en el periodo intensivo aguas arriba predomina el nacimiento de sexo masculino.";
-            $farmActivity->best_season = "3 días después de creciente";
+            $farmActivity->name = "Tiempo de pesca";
+            $farmActivity->description = "La oscuridad que ofrecen las noches durante los primeros días de luna nueva y últimos días de luna menguante son catalogadas como las mejores oportunidades para la captura de una buena cantidad de peces, pues aumenta la curiosidad de alimentación de los mismos. ";
+
             $farmActivity->save(); 
 
         }
@@ -311,12 +316,40 @@ class FarmActivitySeeder extends Seeder
             $farmActivity = new FarmActivity;
             $farmActivity->id = 25;
             $farmActivity->icon = $url."/icons/icon25.png";
-            $farmActivity->name = "Meditación y compartir";
-            $farmActivity->description = "Durante estos días hay muchisíma más energia disponible para todos y cuando meditamos esta cantidad de energia puede ser usada para el desarroyo consciente de nuestro mundo.";
-            $farmActivity->best_season = "Los días de Luna llena y luna nueva";
+            $farmActivity->name = "Manejo preventivo de insectos masticadores y cortadores de hoja";
+            $farmActivity->description = "Según estudios, se ha identificado que algunos órdenes de insectos masticadores, chupadores y cortadores de hoja tienen mayor actividad en luna menguante y creciente. Se recomienda hacer un manejo preventivo con aplicación de insecticidas orgánicos al inicio de estas fases. Insecticidas a base de ají, tabaco y ajo cumplen la función de repeler los insectos sin afectar los cultivos ni el ambiente.";
+
             $farmActivity->save(); 
 
         }
+
+        if(FarmActivity::where("id", 26)->count() == 0){
+
+            $farmActivity = new FarmActivity;
+            $farmActivity->id = 26;
+            $farmActivity->icon = $url."/icons/icon26.png";
+            $farmActivity->name = "Manejo preventivo de insectos chupadores y perforadores";
+            $farmActivity->description = "Según estudios, se ha identificado que algunos órdenes de insectos masticadores, chupadores y cortadores de hoja tienen mayor actividad en luna menguante y creciente. Se recomienda hacer un manejo preventivo con aplicación de insecticidas orgánicos al inicio de estas fases. Insecticidas a base de ají, tabaco y ajo cumplen la función de repeler los insectos sin afectar los cultivos ni el ambiente.";
+
+            $farmActivity->save(); 
+
+        }
+
+        if(FarmActivity::where("id", 27)->count() == 0){
+
+            $farmActivity = new FarmActivity;
+            $farmActivity->id = 27;
+            $farmActivity->icon = $url."/icons/icon27.png";
+            $farmActivity->name = "Manejo preventivo de insectos edáficos y rastreros";
+            $farmActivity->description = "Se identifica a la planta más propensa al ataque de estos insectos en la fase de luna nueva, aguas abajo, por tanto se recomienda un manejo preventivo con el uso de controladores biológicos y prácticas culturales como: bacterias y hongos que sean enemigos naturales de las plagas, rotación de cultivos, asociación de cultivos con plantas repelentes y uso de extractos de plantas biocidas y/o biopreparados. ";
+
+            $farmActivity->save(); 
+
+        }
+
+        
+
+        
 
 
     }

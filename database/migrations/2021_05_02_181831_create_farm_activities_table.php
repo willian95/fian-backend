@@ -18,7 +18,7 @@ class CreateFarmActivitiesTable extends Migration
             $table->string("icon");
             $table->string("name");
             $table->text("description");
-            $table->string("best_season");
+            $table->string("best_season")->nullable();
             $table->timestamps();
         });
     }
