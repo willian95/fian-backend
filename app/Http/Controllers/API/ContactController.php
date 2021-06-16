@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\API;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 class ContactController extends Controller
 {
-    
     function contact(Request $request){
 
         $description = $request->text;
@@ -25,5 +25,4 @@ class ContactController extends Controller
         return response()->json(["success" => true, "msg" => "Mensaje enviado"]);
 
     }
-
 }
