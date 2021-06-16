@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\EventController;
 use App\Http\Controllers\API\MarketController;
 use App\Http\Controllers\API\VerifyNumberController;
+use App\Http\Controllers\API\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,3 +31,5 @@ Route::post("/markets", [MarketController::class, "fetchMarkets"]);
 Route::post("/store-number", [VerifyNumberController::class, "storePhoneNumber"]);
 
 Route::post("/verify-number", [VerifyNumberController::class, "verify"]);
+
+Route::post("/contact", [ContactController::class, "contact"]);

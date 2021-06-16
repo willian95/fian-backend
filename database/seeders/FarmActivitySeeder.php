@@ -57,8 +57,7 @@ class FarmActivitySeeder extends Seeder
             $farmActivity->id = 4;
             $farmActivity->icon = $url."/icons/icon4.png";
             $farmActivity->name = "Manejo físico - mecánico arvenses";
-            $farmActivity->description = "Actividad que se recomienda realizar en periodo de aguas abajo, hacer un control físico-mecánico en luna menguante agota las reservas concentradas en las raíces de estas plantas y retarda su recuperación y crecimiento. En climas fríos y templados se recomienda la combinación seguida de dos controles físico-mecánicos, el primero en luna creciente y el segundo en luna 
-            menguante, para así acelerar el agotamiento de las reservas de las mismas.";
+            $farmActivity->description = "Actividad que se recomienda realizar en periodo de aguas abajo, hacer un control físico-mecánico en luna menguante agota las reservas concentradas en las raíces de estas plantas y retarda su recuperación y crecimiento. En climas fríos y templados se recomienda la combinación seguida de dos controles físico-mecánicos, el primero en luna creciente y el segundo en luna menguante, para así acelerar el agotamiento de las reservas de las mismas.";
 
             $farmActivity->save(); 
 
