@@ -9,11 +9,9 @@ class ContactController extends Controller
 {
     function contact(Request $request){
 
-        $description = $request->text;
-
         $to_name = "Admin";
         $to_email = env("MAIL_FROM_ADDRESS");
-        $data = ["description" => $description];
+        $data = ["description" => $request->description, "name" => $request->name, "email" => $request->email];
 
         \Mail::send("mails.contact", $data, function($message) use ($to_name, $to_email) {
 

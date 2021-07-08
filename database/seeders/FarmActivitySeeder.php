@@ -14,7 +14,7 @@ class FarmActivitySeeder extends Seeder
      */
     public function run()
     {
-        $url = "https://fian.sytes.net";
+        $url = "https://app.fiancolombia.org";
         if(FarmActivity::where("id", 1)->count() == 0){
 
             $farmActivity = new FarmActivity;
