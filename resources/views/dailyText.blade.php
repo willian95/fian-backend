@@ -69,7 +69,7 @@
                                 <div class="dataTables_paginate paging_full_numbers" id="kt_datatable_paginate">
                                     <ul class="pagination">
                                         
-                                        <li class="paginate_button page-item active" v-for="link in links">
+                                        <li class="paginate_button page-item active" v-for="(link, index) in links">
                                             <a style="cursor: pointer" aria-controls="kt_datatable" tabindex="0" :class="link.active == false ? linkClass : activeLinkClass":key="index" @click="fetch(link)" v-html="link.label"></a>
                                         </li>
                                         
@@ -363,6 +363,12 @@ const app = new Vue({
                 this.finalFileName = res.data.fileRoute
 
                 this.onLoadingStore = false
+
+                $('.textUpload').modal('hide')
+                $('.modal-backdrop').remove()   
+
+                this.fetch()
+
             }
 
         }
