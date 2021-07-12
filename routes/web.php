@@ -6,6 +6,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\EventsController;
 use App\Http\Controllers\DepartmentController;
 use App\Http\Controllers\MarketController;
+use App\Http\Controllers\DailyTextController;
 use App\Models\Event;
 use Carbon\Carbon;
 /*
@@ -59,6 +60,50 @@ Route::get("market/fetch/{page}", [MarketController::class, "fetch"]);
 Route::post("market/update", [MarketController::class, "update"]);
 Route::post("market/delete", [MarketController::class, "delete"]);
 Route::get("market/download/csv", [MarketController::class, "exportCsv"]);
+
+Route::get("daily-text", [DailyTextController::class, "index"]);
+Route::get("daily-text/fetch", [DailyTextController::class, "fetch"]);
+Route::post("daily-text/upload-file", [DailyTextController::class, "uploadFile"]);
+
+Route::get("dates", function(){
+
+    //meses
+    for($i=1; $i<=12; $i++){
+
+        //días
+        echo "<br>";
+        echo "<br>";
+        for($j = 1; $j <= 31; $j++){
+
+            //si es febrero
+            if($i == 2 && $j > 28){
+
+                break; 
+
+            }else if(($i == 4 && $j > 30) || ($i == 6 && $j > 30) || ($i == 9 && $j > 30) || ($i == 11 && $j > 30)){
+
+                break;
+
+            }
+
+            $month = $i;
+            $day = $j;
+            if($day < 10){
+                $day = "0".$day;
+            }
+
+            if($month < 10){
+                $month = "0".$month;
+            }
+
+            echo $day."/".$month."/2021<br>";
+
+        }
+
+
+    }
+
+});
 
 Route::get("send-test", function(){
 

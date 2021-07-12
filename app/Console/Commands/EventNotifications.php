@@ -7,6 +7,7 @@ use App\Models\Event;
 use Carbon\Carbon;
 use Twilio\Rest\Client;
 use App\Models\PhoneNumber;
+use App\Models\DailyText;
 
 class EventNotifications extends Command
 {
@@ -42,7 +43,7 @@ class EventNotifications extends Command
     public function handle()
     {
         
-        $todayDate = Carbon::now();
+        /*$todayDate = Carbon::now();
         $todayActivities = "Tus actividades del día son: \n";
 
         $event = Event::where("date", $todayDate->format("Y-m-d"))->with("farmActivityEvents", "farmActivityEvents.farmActivity")->first();
@@ -51,14 +52,16 @@ class EventNotifications extends Command
 
             $todayActivities .= $index."- ".$activities->farmActivity->name."\n";
             $index++;
-        }
+        }*/
+        $todayDate = Carbon::now();
+        $text = DailyText::where("date", $todayDate->format("d/m/Y"))->first();
 
         $params = [];
         $params['small_icon'] = url('/assets/agriculture.png'); // icon res name specified in your app
 
 
         \OneSignal::addParams($params)->sendNotificationToAll(
-            $todayActivities, 
+            "FIAN mensaje del día: ".$text->text, 
             $url = null, 
             $data = null, 
             $buttons = null, 
@@ -68,7 +71,7 @@ class EventNotifications extends Command
         foreach(PhoneNumber::whereNotNull("validated_at")->get() as $user){
 
             $receiverNumber = "+".$user->phone_number;
-            $message = $todayActivities;
+            $message = "FIAN mensaje del día: ".$text->text;
     
             try {
     

@@ -164,6 +164,13 @@ License: You must have a valid license purchased only from themeforest(the above
 									</a>
 								</li>
 
+								<li class="menu-item" aria-haspopup="true">
+									<a href="{{ url('/daily-text') }}" class="menu-link">
+										<i class="menu-icon flaticon-chat"></i>
+										<span class="menu-text">Frases diarias</span>
+									</a>
+								</li>
+
 								
 							</ul>
 							<!--end::Menu Nav -->

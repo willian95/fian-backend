@@ -6,6 +6,7 @@ use App\Http\Controllers\API\EventController;
 use App\Http\Controllers\API\MarketController;
 use App\Http\Controllers\API\VerifyNumberController;
 use App\Http\Controllers\API\ContactController;
+use App\Http\Controllers\API\DailyTextController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,3 +34,5 @@ Route::post("/store-number", [VerifyNumberController::class, "storePhoneNumber"]
 Route::post("/verify-number", [VerifyNumberController::class, "verify"]);
 
 Route::post("/contact", [ContactController::class, "contact"]);
+
+Route::get("/daily-text", [DailyTextController::class, "fetch"]);
