@@ -11,6 +11,7 @@ class DailyTextController extends Controller
     function fetch(Request $request){
 
         $dailyText = DailyText::where("date", $request->date)->first();
+        dd($dailyText);
         return response()->json(["text" => $dailyText->text]);
 
     }
