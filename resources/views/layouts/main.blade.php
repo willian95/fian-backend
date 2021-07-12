@@ -284,6 +284,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!--begin::Page Scripts(used by this page)-->
 		<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 		<script src="{{ asset('/js/app.js') }}"></script>
+		<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 		@stack("scripts")
 
