@@ -8,6 +8,7 @@ use App\Http\Controllers\DepartmentController;
 use App\Http\Controllers\MarketController;
 use App\Http\Controllers\DailyTextController;
 use App\Models\Event;
+use App\Models\DailyText;
 use Carbon\Carbon;
 /*
 |--------------------------------------------------------------------------
