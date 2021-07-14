@@ -127,7 +127,7 @@ Route::get("send-test", function(){
 
     foreach(PhoneNumber::whereNotNull("validated_at")->get() as $user){
 
-        $receiverNumber = "+".$user->phone_number;
+        $receiverNumber = env("COUNTRY_CODE").$user->phone_number;
         $message = "FIAN mensaje del día: ".$text->text;
 
         try {
