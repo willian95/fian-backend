@@ -27,7 +27,7 @@ class VerifyNumberController extends Controller
 
         $this->sendCode($phoneNumber);
 
-        return response()->json(["success" => true, "msg" => "Código enviado"]);
+        return response()->json(["success" => true, "msg" => "Código enviado ".env("COUNTRY_CODE")]);
 
     }
 
