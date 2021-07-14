@@ -21,19 +21,19 @@ class VerifyNumberController extends Controller
         $code = str_pad(rand(0, pow(10, $digits)-1), $digits, '0', STR_PAD_LEFT);
 
         $phoneNumber = PhoneNumber::updateOrCreate(
-            ["phone_number" => env("COUNTRY_CODE").$request->phoneNumber],
+            ["phone_number" => $request->phoneNumber],
             ["code" => $code]
         );
 
         $this->sendCode($phoneNumber);
 
-        return response()->json(["success" => true, "msg" => "Código enviado ".env("COUNTRY_CODE")]);
+        return response()->json(["success" => true, "msg" => "Código enviado"]);
 
     }
 
     function sendCode($phoneNumber){
 
-        $receiverNumber = $phoneNumber->phone_number;
+        $receiverNumber = env("COUNTRY_CODE").$phoneNumber->phone_number;
         $message = "Tu código FIAN es: ".$phoneNumber->code;
   
         try {
