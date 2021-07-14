@@ -33,7 +33,7 @@ class VerifyNumberController extends Controller
 
     function sendCode($phoneNumber){
 
-        $receiverNumber = "+".$phoneNumber->phone_number;
+        $receiverNumber = env("COUNTRY_CODE").$phoneNumber->phone_number;
         $message = "Tu código FIAN es: ".$phoneNumber->code;
   
         try {

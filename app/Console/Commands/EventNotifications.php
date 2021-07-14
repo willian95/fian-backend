@@ -43,16 +43,7 @@ class EventNotifications extends Command
     public function handle()
     {
         
-        /*$todayDate = Carbon::now();
-        $todayActivities = "Tus actividades del día son: \n";
 
-        $event = Event::where("date", $todayDate->format("Y-m-d"))->with("farmActivityEvents", "farmActivityEvents.farmActivity")->first();
-        $index = 1;
-        foreach($event->farmActivityEvents as $activities){
-
-            $todayActivities .= $index."- ".$activities->farmActivity->name."\n";
-            $index++;
-        }*/
         $todayDate = Carbon::now();
         $text = DailyText::where("date", $todayDate->format("d/m/Y"))->first();
 

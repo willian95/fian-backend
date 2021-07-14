@@ -24,7 +24,7 @@ class VerifyNumberRequest extends FormRequest
     public function rules()
     {
         return [
-            "phoneNumber" => "required|string|max:12"
+            "phoneNumber" => "required|string|max:10"
         ];
     }
     public function messages()
