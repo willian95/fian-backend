@@ -107,25 +107,42 @@ Route::get("dates", function(){
 
 Route::get("send-test", function(){
 
-    /*$todayDate = Carbon::now();
-    $todayActivities = "";
+    $todayDate = Carbon::now();
+    $text = DailyText::where("date", $todayDate->format("d/m/Y"))->first();
 
-    $event = Event::where("date", $todayDate->format("Y-m-d"))->with("farmActivityEvents", "farmActivityEvents.farmActivity")->first();
-    $index = 1;
-    foreach($event->farmActivityEvents as $activities){
-
-        $todayActivities .= $index."- ".$activities->farmActivity->name."\n";
-        $index++;
-    }*/
+    $params = [];
+    $params['small_icon'] = url('/assets/agriculture.png'); // icon res name specified in your app
 
 
-    \OneSignal::sendNotificationToAll(
-        "test", 
+    \OneSignal::addParams($params)->sendNotificationToAll(
+        "FIAN mensaje del día: ".$text->text, 
         $url = null, 
         $data = null, 
         $buttons = null, 
         $schedule = null
     );
+
+    foreach(PhoneNumber::whereNotNull("validated_at")->get() as $user){
+
+        $receiverNumber = "+".$user->phone_number;
+        $message = "FIAN mensaje del día: ".$text->text;
+
+        try {
+
+            $account_sid = getenv("TWILIO_SID");
+            $auth_token = getenv("TWILIO_TOKEN");
+            $twilio_number = getenv("TWILIO_FROM");
+
+            $client = new Client($account_sid, $auth_token);
+            $client->messages->create($receiverNumber, [
+                'from' => $twilio_number, 
+                'body' => $message]);
+
+        } catch (Exception $e) {
+            //dd("Error: ". $e->getMessage());
+        }
+
+    }
 
 
 });
