@@ -42,7 +42,6 @@ class EventNotifications extends Command
      */
     public function handle()
     {
-        
 
         $todayDate = Carbon::now();
         $text = DailyText::where("date", $todayDate->format("d/m/Y"))->first();
@@ -61,15 +60,15 @@ class EventNotifications extends Command
 
         foreach(PhoneNumber::whereNotNull("validated_at")->get() as $user){
 
-            $receiverNumber = "+".$user->phone_number;
+            $receiverNumber = env("COUNTRY_CODE").$user->phone_number;
             $message = "FIAN mensaje del día: ".$text->text;
-    
+
             try {
-    
+
                 $account_sid = getenv("TWILIO_SID");
                 $auth_token = getenv("TWILIO_TOKEN");
                 $twilio_number = getenv("TWILIO_FROM");
-    
+
                 $client = new Client($account_sid, $auth_token);
                 $client->messages->create($receiverNumber, [
                     'from' => $twilio_number, 
