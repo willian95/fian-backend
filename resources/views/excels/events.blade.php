@@ -13,28 +13,43 @@
     </thead>
     <tbody style="font-size: 12px;">
         @foreach($events as $event)
-        
-            <tr>
-                <td>
-                    {{ $loop->index + 1 }}
-                </td>
-                <td>
-                    {{ $event->date }}
-                </td>
-                <td>
-                    {{ $event->moon_phase }}
-                </td>
 
-                <td colspan="3">
-                    @foreach($event->farmActivityEvents as $activity)
+            @foreach($event->farmActivityEvents as $activity)
 
-                        {{ $activity->farmActivity->name }}
-                    
-                    @endforeach
-                </td>
-                    
-            </tr>
-            
+                @if($loop->index == 0)
+                    <tr>
+                        <td>
+                            {{ $loop->index + 1 }}
+                        </td>
+                        <td>
+                            {{ $event->date }}
+                        </td>
+                        <td>
+                            {{ $event->moon_phase }}
+                        </td>
+                        <td>
+                            {{ $activity->farmActivity->name }}
+                        </td>
+                            
+                    </tr>
+                @else
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            {{ $activity->farmActivity->name }}
+                        </td>
+                    </tr>
+                @endif
+                
+      
+
+
+            @endforeach
+            <tr></tr>
+            <tr></tr>
+
         @endforeach
         
     </tbody>
