@@ -123,13 +123,13 @@ License: You must have a valid license purchased only from themeforest(the above
 			<!--end::Toolbar-->
 		</div>
 		<!--end::Header Mobile-->
-		<div class="d-flex flex-column flex-root">
+		<div class="d-flex flex-column flex-root" >
 			<!--begin::Page-->
 			<div class="d-flex flex-row flex-column-fluid page">
 				<!--begin::Aside-->
 				<div class="aside aside-left aside-fixed d-flex flex-column flex-row-auto" id="kt_aside">
 					<!--begin::Brand-->
-					<div class="brand flex-column-auto" id="kt_brand">
+					<div class="brand flex-column-auto bg-white" id="kt_brand">
 						<!--begin::Logo-->
 						<a href="{{ url('/') }}">
 							<img alt="Logo" src="http://jmpfront.sytes.net/images/iso.png" style="filter: invert(1); width: 100px;" />
@@ -137,36 +137,36 @@ License: You must have a valid license purchased only from themeforest(the above
 					</div>
 					<!--end::Brand-->
 					<!--begin::Aside Menu-->
-					<div class="aside-menu-wrapper flex-column-fluid" id="kt_aside_menu_wrapper">
+					<div class="aside-menu-wrapper flex-column-fluid" id="kt_aside_menu_wrapper" style="background-color: #144e41">
 						<!--begin::Menu Container-->
-						<div id="kt_aside_menu" class="aside-menu my-4" data-menu-vertical="1" data-menu-scroll="1" data-menu-dropdown-timeout="500">
+						<div id="kt_aside_menu" class="aside-menu my-4" data-menu-vertical="1" data-menu-scroll="1" data-menu-dropdown-timeout="500" style="background-color: #144e41">
 							<!--begin::Menu Nav-->
 							<ul class="menu-nav">
 
 								<li class="menu-item" aria-haspopup="true">
-									<a href="{{ url('/home') }}" class="menu-link">
-										<i class="menu-icon flaticon-home-1"></i>
+									<a href="{{ url('/home') }}" class="menu-link" style="color: #fff !important">
+										<i class="menu-icon flaticon-home-1" style="color: #fff !important"></i>
 										<span class="menu-text">Inicio</span>
 									</a>
 								</li>
 
 								<li class="menu-item" aria-haspopup="true">
-									<a href="{{ url('/calendar') }}" class="menu-link">
-										<i class="menu-icon flaticon2-calendar-1"></i>
+									<a href="{{ url('/calendar') }}" class="menu-link" style="color: #fff !important">
+										<i class="menu-icon flaticon2-calendar-1" style="color: #fff !important"></i>
 										<span class="menu-text">Calendario</span>
 									</a>
 								</li>
 
 								<li class="menu-item" aria-haspopup="true">
-									<a href="{{ url('/market') }}" class="menu-link">
-										<i class="menu-icon flaticon2-shopping-cart"></i>
+									<a href="{{ url('/market') }}" class="menu-link" style="color: #fff !important">
+										<i class="menu-icon flaticon2-shopping-cart" style="color: #fff !important"></i>
 										<span class="menu-text">Mercados</span>
 									</a>
 								</li>
 
 								<li class="menu-item" aria-haspopup="true">
-									<a href="{{ url('/daily-text') }}" class="menu-link">
-										<i class="menu-icon flaticon-chat"></i>
+									<a href="{{ url('/daily-text') }}" class="menu-link" style="color: #fff !important">
+										<i class="menu-icon flaticon-chat" style="color: #fff !important"></i>
 										<span class="menu-text">Frases diarias</span>
 									</a>
 								</li>
@@ -201,7 +201,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								<!--begin::User-->
 								<div class="topbar-item">
 									<div class="btn btn-icon w-auto btn-clean d-flex align-items-center btn-lg px-2" id="kt_quick_user_toggle" onclick="toggleUserOptions()">
-										<span class="text-muted font-weight-bold font-size-base d-none d-md-inline mr-1">Hello,</span>
+										<span class="text-muted font-weight-bold font-size-base d-none d-md-inline mr-1">Hola,</span>
 										<span class="text-dark-50 font-weight-bolder font-size-base d-none d-md-inline mr-3">{{ \Auth::user()->name }}</span>
 										<!--<span class="symbol symbol-35 symbol-light-success">
 											<span class="symbol-label font-size-h5 font-weight-bold"></span>
@@ -237,8 +237,8 @@ License: You must have a valid license purchased only from themeforest(the above
 						<div class="container-fluid d-flex flex-column flex-md-row align-items-center justify-content-between">
 							<!--begin::Copyright-->
 							<div class="text-dark text-center" style="width: 100%;">
-								<span class="text-muted font-weight-bold mr-2">2020 - 2021©</span>
-								<a href="h#" target="_blank" class="text-dark-75 text-hover-primary">JMP Copyright</a>
+								<span class="text-muted font-weight-bold mr-2">2021 - 2022©</span>
+								<a href="h#" target="_blank" class="text-dark-75 text-hover-primary">Copyright</a>
 							</div>
 							<!--end::Copyright-->
 							<!--begin::Nav-->

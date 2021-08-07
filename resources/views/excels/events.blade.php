@@ -7,6 +7,7 @@
             <th>#</th>
             <th style="width: 30px;">Fecha</th>
             <th style="width: 30px;">Fase lunar</th>
+            <th style="width: 30px;">Actividades</th>
 
         </tr>
     </thead>
@@ -23,23 +24,17 @@
                 <td>
                     {{ $event->moon_phase }}
                 </td>
+
+                <td colspan="3">
+                    @foreach($event->farmActivityEvents as $activity)
+
+                        {{ $activity->farmActivity->name }}
+                    
+                    @endforeach
+                </td>
                     
             </tr>
-            <tr>
-                <td colspan="3">Actividades</td>
-            <tr>
-            @foreach($event->farmActivityEvents as $activity)
-
-                <tr>
-                    <td colspan="3">
-                        {{ $activity->farmActivity->name }}
-                    </td>
-                </tr>
-
-            @endforeach
-            <tr></tr>
-            <tr></tr>
-
+            
         @endforeach
         
     </tbody>

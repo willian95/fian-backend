@@ -15,7 +15,7 @@
                         </div>
                     </div>
                     <div class="separator separator-solid separator-white opacity-20"></div>
-                    <div class="card-body text-white d-flex">
+                    <div class="card-body text-white d-flex justify-content-center">
                         <span class="mr-3">validados</span> <h3>{{ App\Models\PhoneNumber::whereNotNull("validated_at")->count() }}  / {{ App\Models\PhoneNumber::count() }} </h3> <span class="ml-3">registrados</span>
                     </div>
                 </div>

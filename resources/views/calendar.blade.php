@@ -106,13 +106,13 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="">Fecha de inicio</label>
+                                    <label for="">Fecha inicial</label>
                                     <input type="date" class="form-control" v-model="startDate">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="">Fecha fin</label>
+                                    <label for="">Fecha final</label>
                                     <input type="date" class="form-control" v-model="endDate">
                                 </div>
                             </div>
@@ -134,6 +134,7 @@
 
 @push("scripts")
     <script src="{{ asset('fullcalendar/lib/main.js') }}"></script>
+    <script src="{{ asset('fullcalendar/lib/locales/es.js') }}"></script>
 
     
 
@@ -423,7 +424,7 @@
 
         var calendarEl = document.getElementById('calendar');
         var calendar = new FullCalendar.Calendar(calendarEl, {
-
+            locale: 'es',
             dateClick: function(info) {
                 sync = true
                 date = info.dateStr;
@@ -457,6 +458,12 @@
 
         })
         calendar.render();
+        $('#calendar').fullCalendar({
+            monthNames: ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'],
+            monthNamesShort: ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'],
+            dayNames: ['Domingo','Lunes','Martes','Miércoles','Jueves','Viernes','Sábado'],
+            dayNamesShort: ['Dom','Lun','Mar','Mié','Jue','Vie','Sáb']
+        });
     </script>
 
     

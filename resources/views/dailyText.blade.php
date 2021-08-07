@@ -70,7 +70,7 @@
                                     <ul class="pagination">
                                         
                                         <li class="paginate_button page-item active" v-for="(link, index) in links">
-                                            <a style="cursor: pointer" aria-controls="kt_datatable" tabindex="0" :class="link.active == false ? linkClass : activeLinkClass":key="index" @click="fetch(link)" v-html="link.label"></a>
+                                            <a style="cursor: pointer" aria-controls="kt_datatable" tabindex="0" :class="link.active == false ? linkClass : activeLinkClass":key="index" @click="fetch(link)" v-html="link.label.replace('Previous', 'Anterior').replace('Next', 'Siguiente')"></a>
                                         </li>
                                         
                                         
