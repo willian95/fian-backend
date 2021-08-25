@@ -12,6 +12,10 @@
             </div>
             <div class="login100-form validate-form col-md-6">
 
+                <p class="text-center">
+                    <img src="{{ url('fian.png') }}" style="width: 150px;">
+                </p>
+
                 <p> Content Management System </p>
 
 
@@ -32,7 +36,7 @@
 
 
                 <div class="container-login100-form-btn">
-                    <button class="login100-form-btn" @click="login()">
+                    <button class="login100-form-btn" @click="login()" style="background-color: rgb(20, 78, 65);">
                         Entrar
                     </button>
                 </div>

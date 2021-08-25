@@ -2,6 +2,12 @@
 
 @push("styles")
     <link href="{{ asset('fullcalendar/lib/main.css') }}" rel='stylesheet' />
+
+    <style>
+        .fc-toolbar-title:first-letter{
+            text-transform: uppercase;
+        }
+    </style>
 @endpush
 
 @section("content")
@@ -39,8 +45,8 @@
                 <div class="modal-body">
                     <div class="container-fluid">
                         <div class="row">
-                            <div class="col-md-4 offset-md-8">
-                                @{{ actualDate }}
+                            <div class="col-md-4 offset-md-4">
+                                <h5 class="text-center">@{{ actualDate }}</h5>
                             </div>
                         </div>
                         <div class="row">

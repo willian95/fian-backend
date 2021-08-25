@@ -18,6 +18,7 @@ License: You must have a valid license purchased only from themeforest(the above
 	<head><base href="../../../">
 		<meta charset="utf-8" />
 		<title>FIAN CMS</title>
+		<link rel="shortcut icon" type="image/x-icon" href="{{ url('fian.png') }}">
 		<meta name="description" content="User datatable listing" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 		<link rel="canonical" href="https://keenthemes.com/metronic" />
@@ -89,7 +90,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		<div id="kt_header_mobile" class="header-mobile align-items-center header-mobile-fixed">
 			<!--begin::Logo-->
 			<a href="{{ url('/') }}">
-				<img alt="Logo" class="w-45px" src="" style="filter: invert(1);" />
+				<img alt="Logo" class="w-45px" src="{{ url('fian.png') }}" style="width: 100%;" />
 			</a>
 			<!--end::Logo-->
 			<!--begin::Toolbar-->
@@ -132,7 +133,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="brand flex-column-auto bg-white" id="kt_brand">
 						<!--begin::Logo-->
 						<a href="{{ url('/') }}">
-							<img alt="Logo" src="http://jmpfront.sytes.net/images/iso.png" style="filter: invert(1); width: 100px;" />
+							<img alt="Logo" src="{{ url('fian.png') }}" style="width: 100px;" />
 						</a>
 					</div>
 					<!--end::Brand-->
