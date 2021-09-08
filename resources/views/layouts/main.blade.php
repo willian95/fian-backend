@@ -166,6 +166,13 @@ License: You must have a valid license purchased only from themeforest(the above
 								</li>
 
 								<li class="menu-item" aria-haspopup="true">
+									<a href="{{ url('/phone-number') }}" class="menu-link" style="color: #fff !important">
+										<i class="menu-icon flaticon2-phone" style="color: #fff !important"></i>
+										<span class="menu-text">Números telefónicos</span>
+									</a>
+								</li>
+
+								<li class="menu-item" aria-haspopup="true">
 									<a href="{{ url('/daily-text') }}" class="menu-link" style="color: #fff !important">
 										<i class="menu-icon flaticon-chat" style="color: #fff !important"></i>
 										<span class="menu-text">Frases diarias</span>

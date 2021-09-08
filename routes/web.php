@@ -7,6 +7,7 @@ use App\Http\Controllers\EventsController;
 use App\Http\Controllers\DepartmentController;
 use App\Http\Controllers\MarketController;
 use App\Http\Controllers\DailyTextController;
+use App\Http\Controllers\PhoneController;
 use App\Models\Event;
 use App\Models\DailyText;
 use App\Models\PhoneNumber;
@@ -67,6 +68,10 @@ Route::get("market/download/csv", [MarketController::class, "exportCsv"]);
 Route::get("daily-text", [DailyTextController::class, "index"]);
 Route::get("daily-text/fetch", [DailyTextController::class, "fetch"]);
 Route::post("daily-text/upload-file", [DailyTextController::class, "uploadFile"]);
+
+Route::get("phone-number", [PhoneController::class, "index"]);
+Route::get("phone-number/export/csv", [PhoneController::class, "exportCsv"]);
+Route::get("phone-number/fetch", [PhoneController::class, "fetch"]);
 
 Route::get("dates", function(){
 
