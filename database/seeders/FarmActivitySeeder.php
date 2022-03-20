@@ -14,8 +14,8 @@ class FarmActivitySeeder extends Seeder
      */
     public function run()
     {
-        //$url = 'https://app.fiancolombia.org';
-        $url = 'http://localhost:8000';
+        $url = 'https://app.fiancolombia.org';
+        //$url = 'http://localhost:8000';
         if (FarmActivity::where('id', 1)->count() == 0) {
             $farmActivity = new FarmActivity();
             $farmActivity->id = 1;
