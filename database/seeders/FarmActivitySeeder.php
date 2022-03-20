@@ -297,8 +297,8 @@ class FarmActivitySeeder extends Seeder
             $farmActivity = new FarmActivity();
             $farmActivity->id = 28;
             $farmActivity->icon = $url.'/icon28.png';
-            $farmActivity->name = 'Manejo preventivo de insectos edáficos y rastreros';
-            $farmActivity->description = 'Se identifica a la planta más propensa al ataque de estos insectos en la fase de luna nueva, aguas abajo, por tanto se recomienda un manejo preventivo con el uso de controladores biológicos y prácticas culturales como: bacterias y hongos que sean enemigos naturales de las plagas, rotación de cultivos, asociación de cultivos con plantas repelentes y uso de extractos de plantas biocidas y/o biopreparados. ';
+            $farmActivity->name = 'Mujer recolectora luna blanca';
+            $farmActivity->description = 'Aquella mujer con ciclo de Luna Blanca ovula en Luna llena. Al estar en un periodo de agua arriba, la energía de las plantas está concentrada en sus frutos y follaje, por los tanto, es un momento oportuno para la cosecha';
 
             $farmActivity->save();
         }
@@ -307,8 +307,8 @@ class FarmActivitySeeder extends Seeder
             $farmActivity = new FarmActivity();
             $farmActivity->id = 29;
             $farmActivity->icon = $url.'/icon29.png';
-            $farmActivity->name = 'Manejo preventivo de insectos edáficos y rastreros';
-            $farmActivity->description = 'Se identifica a la planta más propensa al ataque de estos insectos en la fase de luna nueva, aguas abajo, por tanto se recomienda un manejo preventivo con el uso de controladores biológicos y prácticas culturales como: bacterias y hongos que sean enemigos naturales de las plagas, rotación de cultivos, asociación de cultivos con plantas repelentes y uso de extractos de plantas biocidas y/o biopreparados. ';
+            $farmActivity->name = 'Mujer recolectora luna roja';
+            $farmActivity->description = 'Aquella mujer con ciclo de Luna Roja ovula en Luna nueva, sus energías se concentran en la crianza. Es oportuna la cosecha para sí misma de plantas que estimulen su espíritu';
 
             $farmActivity->save();
         }
@@ -317,8 +317,8 @@ class FarmActivitySeeder extends Seeder
             $farmActivity = new FarmActivity();
             $farmActivity->id = 30;
             $farmActivity->icon = $url.'/icon30.png';
-            $farmActivity->name = 'Manejo preventivo de insectos edáficos y rastreros';
-            $farmActivity->description = 'Se identifica a la planta más propensa al ataque de estos insectos en la fase de luna nueva, aguas abajo, por tanto se recomienda un manejo preventivo con el uso de controladores biológicos y prácticas culturales como: bacterias y hongos que sean enemigos naturales de las plagas, rotación de cultivos, asociación de cultivos con plantas repelentes y uso de extractos de plantas biocidas y/o biopreparados. ';
+            $farmActivity->name = 'Mujer sembradora luna blanca';
+            $farmActivity->description = 'La mujer con su menstruación en fase de luna nueva, es una mujer con ciclo de luna blanca. Es un momento de renacimiento, calma e introspección; iniciará un nuevo ciclo. Su energía en aguas abajo, puede canalizarse por medio de la siembra de plantas de raíz y transplantando nuevas plantas, o realizar una fertilización edáfica con el flujo menstrual "Sembrar su luna"';
 
             $farmActivity->save();
         }
@@ -327,8 +327,8 @@ class FarmActivitySeeder extends Seeder
             $farmActivity = new FarmActivity();
             $farmActivity->id = 31;
             $farmActivity->icon = $url.'/icon31.png';
-            $farmActivity->name = 'Manejo preventivo de insectos edáficos y rastreros';
-            $farmActivity->description = 'Se identifica a la planta más propensa al ataque de estos insectos en la fase de luna nueva, aguas abajo, por tanto se recomienda un manejo preventivo con el uso de controladores biológicos y prácticas culturales como: bacterias y hongos que sean enemigos naturales de las plagas, rotación de cultivos, asociación de cultivos con plantas repelentes y uso de extractos de plantas biocidas y/o biopreparados. ';
+            $farmActivity->name = 'Mujer sembradora luna roja';
+            $farmActivity->description = 'La mujer con su menstruación en fase de luna llena, es una mujer con ciclo de luna roja. Su energía y la energía de las plantas están elevadas al máximo, y para ambas es un momento de entregar amor y luz. Por lo tanto se recomienda la siembra como ofrenda sagrada a la tierra';
 
             $farmActivity->save();
         }
